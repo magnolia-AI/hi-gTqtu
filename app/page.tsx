@@ -18,23 +18,25 @@ export default function Home() {
 
   return (
     <div className="min-h-full">
-      {/* Hero Section with gradient background */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-primary/10 to-background pt-32 pb-24">
+      {/* Hero Section with cool gradient background */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-secondary/10 to-background pt-32 pb-24">
         <div className="absolute inset-0 bg-grid-white/10 [mask-image:linear-gradient(0deg,transparent,rgba(255,255,255,0.8),transparent)] pointer-events-none" />
+        <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-secondary/20 blur-3xl" />
+        <div className="absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-primary/20 blur-3xl" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-[800px] mx-auto text-center">
-            <Badge className="mb-4" variant="outline">✨ Modern Web Experience</Badge>
-            <h1 className="text-5xl font-bold tracking-tight lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60 mb-4">
+            <Badge className="mb-4 bg-secondary/10 text-secondary hover:bg-secondary/20" variant="outline">✨ Cool Modern Experience</Badge>
+            <h1 className="text-5xl font-bold tracking-tight lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-primary mb-4">
               Build Beautiful Web Apps
             </h1>
             <p className="mt-6 text-xl text-muted-foreground max-w-[600px] mx-auto">
               Create stunning, responsive web applications with our modern UI components and intuitive design system.
             </p>
             <div className="mt-12 flex flex-wrap gap-4 justify-center">
-              <Button size="lg" className="px-8 gap-2">
+              <Button size="lg" className="px-8 gap-2 bg-primary hover:bg-primary/90">
                 Get Started <ArrowRight className="h-4 w-4" />
               </Button>
-              <Button size="lg" variant="outline" className="px-8" onClick={showToast}>
+              <Button size="lg" variant="outline" className="px-8 border-secondary text-secondary hover:bg-secondary/10" onClick={showToast}>
                 See Demo
               </Button>
             </div>
@@ -43,9 +45,10 @@ export default function Home() {
       </section>
 
       {/* Features Section with Tabs */}
-      <section className="container mx-auto px-4 py-24">
+      <section className="container mx-auto px-4 py-24 relative">
+        <div className="absolute top-0 right-0 w-72 h-72 bg-secondary/10 rounded-full blur-3xl -z-10" />
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold tracking-tight mb-4">
+          <h2 className="text-3xl font-bold tracking-tight mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
             Powerful Features
           </h2>
           <p className="text-muted-foreground max-w-[600px] mx-auto">
@@ -54,17 +57,17 @@ export default function Home() {
         </div>
         
         <Tabs defaultValue="design" className="max-w-[1000px] mx-auto">
-          <TabsList className="grid w-full grid-cols-3 mb-8">
-            <TabsTrigger value="design">Design System</TabsTrigger>
-            <TabsTrigger value="components">Components</TabsTrigger>
-            <TabsTrigger value="performance">Performance</TabsTrigger>
+          <TabsList className="grid w-full grid-cols-3 mb-8 bg-secondary/5">
+            <TabsTrigger value="design" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">Design System</TabsTrigger>
+            <TabsTrigger value="components" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">Components</TabsTrigger>
+            <TabsTrigger value="performance" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">Performance</TabsTrigger>
           </TabsList>
           <TabsContent value="design" className="space-y-4">
             <div className="grid md:grid-cols-2 gap-8">
-              <Card>
+              <Card className="border-primary/10 bg-gradient-to-br from-background to-primary/5 shadow-md">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <CheckCircle className="h-5 w-5 text-primary" /> Consistent UI
+                    <CheckCircle className="h-5 w-5 text-secondary" /> Consistent UI
                   </CardTitle>
                   <CardDescription>
                     Maintain visual consistency across your entire application
@@ -76,7 +79,7 @@ export default function Home() {
                   </p>
                 </CardContent>
               </Card>
-              <Card>
+              <Card className="border-primary/10 bg-gradient-to-br from-background to-secondary/5 shadow-md">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Zap className="h-5 w-5 text-primary" /> Rapid Development
@@ -95,10 +98,10 @@ export default function Home() {
           </TabsContent>
           <TabsContent value="components" className="space-y-4">
             <div className="grid md:grid-cols-2 gap-8">
-              <Card>
+              <Card className="border-primary/10 bg-gradient-to-br from-background to-primary/5 shadow-md">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <Star className="h-5 w-5 text-primary" /> Premium Components
+                    <Star className="h-5 w-5 text-secondary" /> Premium Components
                   </CardTitle>
                   <CardDescription>
                     High-quality UI elements for every need
@@ -110,7 +113,7 @@ export default function Home() {
                   </p>
                 </CardContent>
               </Card>
-              <Card>
+              <Card className="border-primary/10 bg-gradient-to-br from-background to-secondary/5 shadow-md">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <ArrowUpRight className="h-5 w-5 text-primary" /> Extensible
@@ -129,10 +132,10 @@ export default function Home() {
           </TabsContent>
           <TabsContent value="performance" className="space-y-4">
             <div className="grid md:grid-cols-2 gap-8">
-              <Card>
+              <Card className="border-primary/10 bg-gradient-to-br from-background to-primary/5 shadow-md">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <Clock className="h-5 w-5 text-primary" /> Optimized Loading
+                    <Clock className="h-5 w-5 text-secondary" /> Optimized Loading
                   </CardTitle>
                   <CardDescription>
                     Fast loading times for better user experience
@@ -144,7 +147,7 @@ export default function Home() {
                   </p>
                 </CardContent>
               </Card>
-              <Card>
+              <Card className="border-primary/10 bg-gradient-to-br from-background to-secondary/5 shadow-md">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Zap className="h-5 w-5 text-primary" /> Responsive Design
@@ -165,10 +168,11 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="bg-muted/50 py-24">
-        <div className="container mx-auto px-4">
+      <section className="bg-gradient-to-br from-primary/5 to-secondary/5 py-24 relative">
+        <div className="absolute inset-0 bg-grid-white/10 [mask-image:linear-gradient(0deg,transparent,rgba(255,255,255,0.5),transparent)] pointer-events-none" />
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight mb-4">
+            <h2 className="text-3xl font-bold tracking-tight mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
               What Our Users Say
             </h2>
             <p className="text-muted-foreground max-w-[600px] mx-auto">
@@ -177,22 +181,22 @@ export default function Home() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-[1200px] mx-auto">
-            <Card className="bg-background">
+            <Card className="bg-background/80 backdrop-blur-sm border-primary/10 shadow-lg">
               <CardContent className="pt-6">
                 <div className="flex items-center mb-4">
                   {[1, 2, 3, 4, 5].map((star) => (
-                    <Star key={star} className="h-5 w-5 fill-primary text-primary" />
+                    <Star key={star} className="h-5 w-5 fill-secondary text-secondary" />
                   ))}
                 </div>
                 <p className="italic text-muted-foreground leading-relaxed mb-6">
                   "This framework has completely transformed how I build web applications. The components are beautiful and the API is intuitive."
                 </p>
-                <div className="font-semibold">Sarah Johnson</div>
+                <div className="font-semibold text-primary">Sarah Johnson</div>
                 <div className="text-sm text-muted-foreground">Frontend Developer</div>
               </CardContent>
             </Card>
             
-            <Card className="bg-background">
+            <Card className="bg-background/80 backdrop-blur-sm border-secondary/10 shadow-lg">
               <CardContent className="pt-6">
                 <div className="flex items-center mb-4">
                   {[1, 2, 3, 4, 5].map((star) => (
@@ -202,22 +206,22 @@ export default function Home() {
                 <p className="italic text-muted-foreground leading-relaxed mb-6">
                   "I've tried many UI libraries, but this one stands out for its attention to detail and exceptional documentation. Highly recommended!"
                 </p>
-                <div className="font-semibold">Michael Chen</div>
+                <div className="font-semibold text-secondary">Michael Chen</div>
                 <div className="text-sm text-muted-foreground">Product Designer</div>
               </CardContent>
             </Card>
             
-            <Card className="bg-background">
+            <Card className="bg-background/80 backdrop-blur-sm border-primary/10 shadow-lg">
               <CardContent className="pt-6">
                 <div className="flex items-center mb-4">
                   {[1, 2, 3, 4, 5].map((star) => (
-                    <Star key={star} className="h-5 w-5 fill-primary text-primary" />
+                    <Star key={star} className="h-5 w-5 fill-secondary text-secondary" />
                   ))}
                 </div>
                 <p className="italic text-muted-foreground leading-relaxed mb-6">
                   "The speed at which I can now prototype and build production-ready applications is incredible. This has become my go-to framework."
                 </p>
-                <div className="font-semibold">Alex Rodriguez</div>
+                <div className="font-semibold text-primary">Alex Rodriguez</div>
                 <div className="text-sm text-muted-foreground">Full Stack Developer</div>
               </CardContent>
             </Card>
@@ -226,30 +230,34 @@ export default function Home() {
       </section>
 
       {/* Call to Action Section */}
-      <section className="container mx-auto px-4 py-24">
-        <Card className="max-w-[900px] mx-auto overflow-hidden border-primary/20">
+      <section className="container mx-auto px-4 py-24 relative">
+        <div className="absolute -bottom-20 right-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl -z-10" />
+        <div className="absolute -top-20 left-20 w-64 h-64 bg-secondary/10 rounded-full blur-3xl -z-10" />
+        <Card className="max-w-[900px] mx-auto overflow-hidden border-none shadow-xl bg-gradient-to-br from-background via-background to-background/80">
           <div className="grid md:grid-cols-2">
             <div className="p-8 md:p-10">
-              <h2 className="text-3xl font-bold tracking-tight mb-4">
+              <h2 className="text-3xl font-bold tracking-tight mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
                 Ready to Get Started?
               </h2>
               <p className="text-muted-foreground mb-8">
                 Join thousands of developers building amazing web applications with our modern UI framework.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button className="gap-2">
+                <Button className="gap-2 bg-primary hover:bg-primary/90">
                   Start Building <ArrowRight className="h-4 w-4" />
                 </Button>
-                <Button variant="outline">
+                <Button variant="outline" className="border-secondary text-secondary hover:bg-secondary/10">
                   View Documentation
                 </Button>
               </div>
             </div>
-            <div className="bg-gradient-to-br from-primary/80 to-primary p-10 flex items-center justify-center">
-              <div className="text-white text-center">
+            <div className="bg-gradient-to-br from-primary to-secondary p-10 flex items-center justify-center relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-xl" />
+              <div className="absolute bottom-0 left-0 w-32 h-32 bg-black/10 rounded-full blur-xl" />
+              <div className="text-white text-center relative z-10">
                 <h3 className="text-2xl font-bold mb-2">Join Our Community</h3>
                 <p className="mb-6 opacity-90">Get support, share ideas, and collaborate with other developers</p>
-                <Button variant="secondary" className="w-full">
+                <Button variant="secondary" className="w-full bg-white/20 hover:bg-white/30 backdrop-blur-sm">
                   Join Discord
                 </Button>
               </div>
@@ -260,3 +268,10 @@ export default function Home() {
     </div>
   )
 }
+
+
+
+
+
+
+
