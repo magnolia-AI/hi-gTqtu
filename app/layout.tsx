@@ -7,9 +7,11 @@ import { ThemeProvider } from '@/components/theme-provider'
 import { ThemeToggle } from '@/components/theme-toggle'
 import { MobileNav } from '@/components/mobile-nav'
 
+const inter = Inter({ subsets: ['latin'] })
+
 export const metadata: Metadata = {
-  title: 'Next.js Template',
-  description: 'A customizable template built with Next.js and Tailwind CSS',
+  title: 'My Portfolio | Professional Developer',
+  description: 'Personal portfolio showcasing my projects, skills, and experience as a developer',
   icons: {
     icon: '/favicon.ico',
   },
@@ -21,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full" suppressHydrationWarning>
       {/* If inter.className is removed, we cannot leave empty brackets as className, it will throw an error */}
-      <body className={`h-full flex flex-col antialiased`}>
+      <body className={}>
         <ThemeProvider defaultTheme="light" attribute="class">
           {/* 
             TEMPLATE SECTION: Header
