@@ -10,8 +10,8 @@ import { MobileNav } from '@/components/mobile-nav'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Next.js Template',
-  description: 'A customizable template built with Next.js and Tailwind CSS',
+  title: 'My Portfolio | Professional Developer',
+  description: 'Personal portfolio showcasing my projects, skills, and experience as a developer',
   icons: {
     icon: '/favicon.ico',
   },
@@ -23,33 +23,33 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full" suppressHydrationWarning>
       {/* If inter.className is removed, we cannot leave empty brackets as className, it will throw an error */}
-      <body className={`${inter.className} h-full flex flex-col antialiased`}>
+      <body className={}>
         <ThemeProvider defaultTheme="light" attribute="class">
           {/* 
             TEMPLATE SECTION: Header
             This is a template header - replace with your own navigation
             Consider adding a logo, navigation links, theme toggle, etc.
           */}
-          <header className="border-b">
+          <header className="border-b sticky top-0 bg-background/95 backdrop-blur z-10">
             <div className="container mx-auto px-4 h-16 flex items-center justify-between">
               <div className="flex items-center gap-2">
-
-                {/* 
-                  TEMPLATE SECTION: Mobile Navigation
-                  This is a template mobile navigation, uncomment to use
-                  Remember to update the mobile navigation in the mobile-nav.tsx file
-                */}
-                {/* <MobileNav /> */}
-                <div className="font-semibold">Template Logo</div>
+                <MobileNav />
+                <div className="font-bold text-xl">
+                  <span className="text-primary">Portfolio</span>
+                </div>
               </div>
-              {/* <nav className="hidden md:flex gap-6">
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Link 1</a>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Link 2</a>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Link 3</a>
-              </nav> */}
+              <nav className="hidden md:flex gap-6">
+                <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">About</a>
+                <a href="#skills" className="text-muted-foreground hover:text-foreground transition-colors">Skills</a>
+                <a href="#projects" className="text-muted-foreground hover:text-foreground transition-colors">Projects</a>
+                <a href="#experience" className="text-muted-foreground hover:text-foreground transition-colors">Experience</a>
+                <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact</a>
+              </nav>
               <div className="flex items-center gap-2">
                 <ThemeToggle />
-                <Button variant="outline" size="sm">Template Button</Button>
+                <Button variant="default" size="sm" asChild>
+                  <a href="#contact">Get in Touch</a>
+                </Button>
               </div>
             </div>
           </header>
@@ -123,3 +123,4 @@ export default function RootLayout({
     </html>
   )
 }
+
