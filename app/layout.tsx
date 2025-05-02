@@ -7,11 +7,9 @@ import { ThemeProvider } from '@/components/theme-provider'
 import { ThemeToggle } from '@/components/theme-toggle'
 import { MobileNav } from '@/components/mobile-nav'
 
-const inter = Inter({ subsets: ['latin'] })
-
 export const metadata: Metadata = {
-  title: 'My Portfolio | Professional Developer',
-  description: 'Personal portfolio showcasing my projects, skills, and experience as a developer',
+  title: 'Next.js Template',
+  description: 'A customizable template built with Next.js and Tailwind CSS',
   icons: {
     icon: '/favicon.ico',
   },
@@ -23,14 +21,14 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full" suppressHydrationWarning>
       {/* If inter.className is removed, we cannot leave empty brackets as className, it will throw an error */}
-      <body className={}>
+      <body className={`h-full flex flex-col antialiased`}>
         <ThemeProvider defaultTheme="light" attribute="class">
           {/* 
             TEMPLATE SECTION: Header
             This is a template header - replace with your own navigation
             Consider adding a logo, navigation links, theme toggle, etc.
           */}
-          <header className="border-b sticky top-0 bg-background/95 backdrop-blur z-10">
+         <header className="border-b sticky top-0 bg-background/95 backdrop-blur z-10">
             <div className="container mx-auto px-4 h-16 flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <MobileNav />
@@ -123,4 +121,3 @@ export default function RootLayout({
     </html>
   )
 }
-
