@@ -17,30 +17,50 @@ export function MobileNav() {
         </Button>
       </SheetTrigger>
       <SheetContent side="left" className="w-[240px] sm:w-[300px]">
-        <nav className="flex flex-col gap-4 mt-8">
-          {/* <a
-            href="#"
+        <div className="font-bold text-xl mb-6">
+          <span className="text-primary">Portfolio</span>
+        </div>
+        <nav className="flex flex-col gap-4">
+          <a
+            href="#about"
             className="px-2 py-1 text-foreground hover:text-primary transition-colors"
             onClick={() => setOpen(false)}
           >
-            Link 1
+            About
           </a>
           <a
-            href="#"
+            href="#skills"
             className="px-2 py-1 text-foreground hover:text-primary transition-colors"
             onClick={() => setOpen(false)}
           >
-            Link 2
+            Skills
           </a>
           <a
-            href="#"
+            href="#projects"
             className="px-2 py-1 text-foreground hover:text-primary transition-colors"
             onClick={() => setOpen(false)}
           >
-            Link 3
-          </a> */}
+            Projects
+          </a>
+          <a
+            href="#experience"
+            className="px-2 py-1 text-foreground hover:text-primary transition-colors"
+            onClick={() => setOpen(false)}
+          >
+            Experience
+          </a>
+          <a
+            href="#contact"
+            className="px-2 py-1 text-foreground hover:text-primary transition-colors"
+            onClick={() => setOpen(false)}
+          >
+            Contact
+          </a>
+          <Button className="mt-4" onClick={() => setOpen(false)}>
+            <a href="#contact">Get in Touch</a>
+          </Button>
         </nav>
       </SheetContent>
     </Sheet>
   )
-} 
+}
