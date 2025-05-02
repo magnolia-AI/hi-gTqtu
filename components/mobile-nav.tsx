@@ -16,7 +16,7 @@ export function MobileNav() {
           <span className="sr-only">Toggle menu</span>
         </Button>
       </SheetTrigger>
-      <SheetContent side="left" className="w-[240px] sm:w-[300px]">
+      <SheetContent side="left" className="w-[240px] sm:w-[300px] z-50">
         <div className="font-bold text-xl mb-6">
           <span className="text-primary">Portfolio</span>
         </div>
@@ -64,3 +64,4 @@ export function MobileNav() {
     </Sheet>
   )
 }
+

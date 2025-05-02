@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <div className="min-h-full">
       {/* Hero Section with cool gradient background */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-secondary/10 to-background pt-32 pb-24">
+      <section id="about" className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-secondary/10 to-background pt-32 pb-24">
         <div className="absolute inset-0 bg-grid-white/10 [mask-image:linear-gradient(0deg,transparent,rgba(255,255,255,0.8),transparent)] pointer-events-none" />
         <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-secondary/20 blur-3xl" />
         <div className="absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-primary/20 blur-3xl" />
@@ -45,7 +45,7 @@ export default function Home() {
       </section>
 
       {/* Features Section with Tabs */}
-      <section className="container mx-auto px-4 py-24 relative">
+      <section id="skills" className="container mx-auto px-4 py-24 relative">
         <div className="absolute top-0 right-0 w-72 h-72 bg-secondary/10 rounded-full blur-3xl -z-10" />
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
@@ -168,7 +168,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="bg-gradient-to-br from-primary/5 to-secondary/5 py-24 relative">
+      <section id="experience" className="bg-gradient-to-br from-primary/5 to-secondary/5 py-24 relative">
         <div className="absolute inset-0 bg-grid-white/10 [mask-image:linear-gradient(0deg,transparent,rgba(255,255,255,0.5),transparent)] pointer-events-none" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
@@ -230,7 +230,7 @@ export default function Home() {
       </section>
 
       {/* Call to Action Section */}
-      <section className="container mx-auto px-4 py-24 relative">
+      <section id="projects" className="container mx-auto px-4 py-24 relative">
         <div className="absolute -bottom-20 right-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl -z-10" />
         <div className="absolute -top-20 left-20 w-64 h-64 bg-secondary/10 rounded-full blur-3xl -z-10" />
         <Card className="max-w-[900px] mx-auto overflow-hidden border-none shadow-xl bg-gradient-to-br from-background via-background to-background/80">
@@ -268,6 +268,12 @@ export default function Home() {
     </div>
   )
 }
+
+
+
+
+
+
 
 
 
