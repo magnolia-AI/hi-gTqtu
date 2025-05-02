@@ -1,13 +1,10 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Toaster } from "@/components/ui/toaster"
-import { Inter } from 'next/font/google'
 import { Button } from '@/components/ui/button'
 import { ThemeProvider } from '@/components/theme-provider'
 import { ThemeToggle } from '@/components/theme-toggle'
 import { MobileNav } from '@/components/mobile-nav'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'My Portfolio | Professional Developer',
@@ -23,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full" suppressHydrationWarning>
       {/* If inter.className is removed, we cannot leave empty brackets as className, it will throw an error */}
-      <body className={}>
+      <body className="">
         <ThemeProvider defaultTheme="light" attribute="class">
           {/* 
             TEMPLATE SECTION: Header
